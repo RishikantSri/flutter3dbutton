@@ -1,9 +1,9 @@
 import 'package:flutter/material.dart';
 
 class ButtonTapped extends StatelessWidget {
-  var icon;
+  final IconData? icon;
 
-  ButtonTapped({
+  const ButtonTapped({
     Key? key,
     this.icon,
   }) : super(key: key);
