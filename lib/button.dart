@@ -8,29 +8,22 @@ class MyButton extends StatelessWidget {
     this.icon,
   }) : super(key: key);
 
-
   @override
   Widget build(BuildContext context) {
     return Padding(
-      padding: EdgeInsets.all(4),
+      padding: const EdgeInsets.all(4),
       child: Container(
-
-        padding: EdgeInsets.all(20),
-        child: Icon(
-          icon,
-          size: 37,
-          color: Colors.grey[800],
-        ),
+        padding: const EdgeInsets.all(20),
         decoration: BoxDecoration(
             shape: BoxShape.circle,
             color: Colors.grey[300],
             boxShadow: [
               BoxShadow(
                   color: Colors.grey[600]!,
-                  offset: Offset(4.0, 4.0),
+                  offset: const Offset(4.0, 4.0),
                   blurRadius: 15.0,
                   spreadRadius: 1.0),
-              BoxShadow(
+              const BoxShadow(
                   color: Colors.white,
                   offset: Offset(-4.0, -4.0),
                   blurRadius: 15.0,
@@ -45,12 +38,17 @@ class MyButton extends StatelessWidget {
                   Colors.grey[400]!,
                   Colors.grey[500]!,
                 ],
-                stops: [
+                stops: const [
                   0.1,
                   0.3,
                   0.8,
                   1
                 ])),
+        child: Icon(
+          icon,
+          size: 37,
+          color: Colors.grey[800],
+        ),
       ),
     );
   }
